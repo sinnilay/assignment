@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            padding: 11px;
+            
+            border: 5px solid black;
+        }
+
+
+        #hed{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="divv">
+        <h1 id="hed">THIS IS LIGHT MODE</h1>
+        <button id="btn">
+            TOGGLE MODE
+        </button>
+    </div>
+
+    <h4> NOTE:
+        <li>
+            <ol>Single click for changing in dark mode</ol>
+            <ol>Double click for changing in Light mode </ol>
+        </li>
+    </h4>
+
+    <script>
+        let head = document.getElementById('hed')
+        let button = document.getElementById('btn')
+        let divv = document.getElementById('divv')
+          
+       
+
+
+       button.addEventListener('click',  () => { 
+            document.body.style.backgroundColor = 'black';
+            head.textContent = 'THIS IS DARK MODE';
+            head.style.color = 'white';
+       } )
+
+       button.addEventListener('dblclick',  () => { 
+        document.body.style.backgroundColor = 'white';
+            head.textContent = 'THIS IS LIGHT MODE';
+            head.style.color = 'black';
+       } )
+    </script>
+</body>
+</html>
